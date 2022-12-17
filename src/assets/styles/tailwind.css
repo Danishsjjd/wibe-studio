@@ -1,3 +1,17 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@layer base {
+  :root {
+    --body: 0 0% 13%;
+    --text: 0 0% 100%;
+    --bodyRgba: 013%87%;
+    --textRgba: 0 0% 100%;
+    --grey: 0 0% 75%;
+  }
+  body {
+    font-family: "Sirin Stencil";
+    overflow-x: hidden;
+  }
+}

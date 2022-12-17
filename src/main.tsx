@@ -1,3 +1,5 @@
+import "@fontsource/kaushan-script";
+import "@fontsource/sirin-stencil";
 import React from "react";
 import ReactDOM from "react-dom/client";
 
