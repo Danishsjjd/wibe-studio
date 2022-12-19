@@ -13,5 +13,18 @@
   body {
     font-family: "Sirin Stencil";
     overflow-x: hidden;
+    background-color: white;
+
+    --body-text: hsl(0 0% 13%);
+    --text-text: hsl(0 0% 100%);
+    --bodyRgba-text: hsl(013%87%);
+    --textRgba-text: hsl(0 0% 100%);
+    --grey-text: hsl(0 0% 75%);
+  }
+  .btn-clip {
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+  }
+  .text-shadow {
+    text-shadow: rgb(32 32 32) 1px 1px 1px;
   }
 }
