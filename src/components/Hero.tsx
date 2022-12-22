@@ -46,47 +46,12 @@ const Hero = () => {
           animate="show"
         >
           <div className="text-shadow flex font-kaushan [&>*]:text-[10rem]">
-            <motion.h2
-              variants={item}
-              data-scroll
-              data-scroll-delay="0.13"
-              data-scroll-speed="4"
-            >
-              W
-            </motion.h2>
-            <motion.h2
-              variants={item}
-              data-scroll
-              data-scroll-delay="0.09"
-              data-scroll-speed="4"
-            >
-              i
-            </motion.h2>
-            <motion.h2
-              variants={item}
-              data-scroll
-              data-scroll-delay="0.06"
-              data-scroll-speed="4"
-            >
-              b
-            </motion.h2>
-            <motion.h2
-              variants={item}
-              data-scroll
-              data-scroll-delay="0.04"
-              data-scroll-speed="4"
-            >
-              e
-            </motion.h2>
+            <motion.h2 variants={item}>W</motion.h2>
+            <motion.h2 variants={item}>i</motion.h2>
+            <motion.h2 variants={item}>b</motion.h2>
+            <motion.h2 variants={item}>e</motion.h2>
           </div>
-          <motion.h2
-            variants={item}
-            data-scroll
-            data-scroll-delay="0.04"
-            data-scroll-speed="2"
-          >
-            Inspire. Create. Belive
-          </motion.h2>
+          <motion.h2 variants={item}>Inspire. Create. Belive</motion.h2>
         </motion.div>
       </div>
     </section>

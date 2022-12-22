@@ -42,12 +42,7 @@ const Collections = () => {
     <section className="min-h-[100vh] bg-white" ref={section}>
       <div className="flex">
         <div className="relative grid min-h-[100vh] w-1/3 place-items-center bg-body p-6 text-text">
-          <h2
-            className="text-shadow absolute top-4 font-kaushan text-8xl"
-            data-scroll
-            data-scroll-direction="horizontal"
-            data-scroll-speed="-1"
-          >
+          <h2 className="text-shadow absolute top-4 font-kaushan text-8xl">
             New Collections
           </h2>
           <p className="mt-16 text-xl">

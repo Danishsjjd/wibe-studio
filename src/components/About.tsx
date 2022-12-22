@@ -6,23 +6,12 @@ const About = () => {
     <section id="About" className="overflow-hidden bg-white">
       <div className="mx-auto flex min-h-[100vh] max-w-7xl gap-3 py-3">
         <div className="flex-1">
-          <h2
-            className="text-shadow font-kaushan text-9xl"
-            data-scroll
-            data-scroll-direction="horizontal"
-            data-scroll-speed="-3"
-          >
-            About Us
-          </h2>
+          <h2 className="text-shadow font-kaushan text-9xl">About Us</h2>
           <div
             className="relative  z-10 mt-3 h-[80vh]  pr-7 text-xl"
             id="about-fixed-target"
           >
-            <p
-              data-scroll
-              data-scroll-sticky
-              data-scroll-target="#about-fixed-target"
-            >
+            <p>
               We're fashion studio based in california. We create unique designs
               that will blow your mind. We also design unique jewellary pieces.
               Fashion is an ART that can not be grasped by everyone.
@@ -50,15 +39,11 @@ const About = () => {
             src={img2}
             alt="second image"
             className="absolute top-[20%] -right-16 h-96 w-60 object-cover"
-            data-scroll
-            data-scroll-speed="-2"
           />
           <img
             src={img3}
             alt="third image"
             className="absolute top-[40%] -left-40 h-80 w-52 object-cover"
-            data-scroll
-            data-scroll-speed="1"
           />
         </div>
       </div>
