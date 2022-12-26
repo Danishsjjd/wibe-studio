@@ -27,4 +27,7 @@
   .text-shadow {
     text-shadow: rgb(32 32 32) 1px 1px 1px;
   }
+  .scroll-hidden::-webkit-scrollbar {
+    width: 0;
+  }
 }
