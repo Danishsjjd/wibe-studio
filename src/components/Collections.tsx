@@ -27,7 +27,7 @@ const Collections = () => {
         trigger: section.current,
         start: "top top",
         end: () => `+=${container.current?.offsetWidth}`,
-        markers: true,
+        // markers: true,
         pin: section.current,
         scrub: 1,
       },

@@ -1,8 +1,9 @@
-import { motion } from "framer-motion";
+import { motion, useMotionValue } from "framer-motion";
 import { useState } from "react";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
+  const y = useMotionValue(0);
   const liClass =
     "hover:scale-125 text-lg font-medium transition grid place-items-center";
 
@@ -23,6 +24,12 @@ const Navbar = () => {
           bottom: 0,
         }}
         dragElastic={0.099}
+        onDragEnd={() => {
+          if (y.get() > 8) {
+            setIsActive(true);
+          }
+        }}
+        style={{ y }}
       >
         <ul className="relative mx-auto flex h-full w-full max-w-4xl justify-between">
           <motion.li

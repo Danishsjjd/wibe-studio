@@ -1,7 +1,9 @@
 import About from "./components/About";
+import Arrivals from "./components/Arrivals";
 import Collections from "./components/Collections";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import ParallaxText from "./components/ParallaxText";
 
 function App() {
   return (
@@ -10,7 +12,15 @@ function App() {
       <Hero />
       <About />
       <Collections />
-      <div className="h-screen w-screen bg-emerald-400"></div>
+      <div className="relative py-12">
+        <ParallaxText baseVelocity={1}>
+          FASHION IS AN ARMOUR TO SURVIVE EVERYDAY LIFE
+        </ParallaxText>
+        <ParallaxText baseVelocity={-1}>
+          OVER-DRESSED OR UNDER-DRESSED WITH A LITTLE BLACK DRESS
+        </ParallaxText>
+      </div>
+      <Arrivals />
     </main>
   );
 }
