@@ -7,9 +7,7 @@ const Navbar = () => {
   const liClass =
     "hover:scale-125 text-lg font-medium transition grid place-items-center";
 
-  const navigateTo = (section: string) => {
-    console.log(section);
-  };
+  const navigateTo = (section: string) => {};
   return (
     <motion.div
       className={`absolute top-0 z-50 w-screen transition-transform ${

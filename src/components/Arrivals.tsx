@@ -28,7 +28,6 @@ const Arrivals = () => {
         trigger: section.current,
         start: "top top",
         end: () => `+=${container.current?.offsetHeight}`,
-        markers: true,
         pin: section.current,
         scrub: 1,
       },
@@ -65,7 +64,7 @@ const Arrivals = () => {
             ))}
           </div>
         </div>
-        <div className="sticky top-0 ml-auto max-w-xs self-center text-xl">
+        <div className="ml-auto max-w-xs self-center text-xl">
           <p>
             There is new collection available for cool clothes in all sizes.
             This collection is a great way to find a new look for you. It offers
