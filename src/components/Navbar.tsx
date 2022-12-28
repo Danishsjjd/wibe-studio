@@ -5,17 +5,17 @@ const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
   const y = useMotionValue(0);
   const liClass =
-    "hover:scale-125 text-lg font-medium transition grid place-items-center";
+    "hover:scale-125 py-8 text-lg font-medium transition grid place-items-center";
 
   const navigateTo = (section: string) => {};
   return (
     <motion.div
       className={`absolute top-0 z-50 w-screen transition-transform ${
-        isActive ? "translate-y-0" : "-translate-y-20"
+        isActive ? "translate-y-0" : "-translate-y-[100%]"
       }`}
     >
       <motion.div
-        className="flex  h-20 w-full items-center  justify-center bg-body  text-text"
+        className="flex  w-full items-center  justify-center bg-body  text-text"
         drag="y"
         dragConstraints={{
           top: 0,
@@ -29,7 +29,7 @@ const Navbar = () => {
         }}
         style={{ y }}
       >
-        <ul className="relative mx-auto flex h-full w-full max-w-4xl justify-between">
+        <ul className="relative mx-auto flex h-full w-full max-w-4xl flex-col justify-between md:flex-row">
           <motion.li
             className="absolute left-1/2 top-[100%] -translate-x-1/2"
             initial={{ top: 0 }}

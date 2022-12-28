@@ -4,11 +4,13 @@ import img3 from "../assets/Images/3.webp";
 const About = () => {
   return (
     <section id="About" className="overflow-hidden bg-white">
-      <div className="mx-auto flex min-h-[100vh] max-w-7xl gap-3 py-3">
-        <div className="flex-1">
-          <h2 className="text-shadow font-kaushan text-9xl">About Us</h2>
+      <div className="relative mx-auto min-h-[100vh] max-w-7xl gap-3 py-3 px-6 md:flex md:px-0">
+        <div className="relative z-10 flex-1">
+          <h2 className="text-shadow  font-kaushan text-4xl md:text-9xl">
+            About Us
+          </h2>
           <div
-            className="relative  z-10 mt-3 h-[80vh]  pr-7 text-xl"
+            className="relative z-10 mx-auto mt-3 max-w-xl rounded-md bg-white/40 p-4 pr-7 text-base backdrop-blur-sm md:h-[80vh] md:max-w-none md:bg-transparent md:p-0 md:text-xl md:backdrop-blur-0"
             id="about-fixed-target"
           >
             <p>
@@ -29,21 +31,21 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="relative flex-1 overflow-visible">
+        <div className="absolute inset-0 mx-3 flex-1  overflow-visible md:relative md:mx-0">
           <img
             src={img1}
             alt="first image"
-            className="max-h-[100vh] w-full object-cover"
+            className="h-full max-h-[100vh] w-full object-cover"
           />
           <img
             src={img2}
             alt="second image"
-            className="absolute top-[20%] -right-16 h-96 w-60 object-cover"
+            className="absolute top-[20%] right-0 h-96 w-60 object-cover md:-right-16"
           />
           <img
             src={img3}
             alt="third image"
-            className="absolute top-[40%] -left-40 h-80 w-52 object-cover"
+            className="absolute top-[40%] left-0 h-80 w-52 object-cover md:-left-40"
           />
         </div>
       </div>

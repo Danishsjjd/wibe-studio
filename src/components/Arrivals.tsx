@@ -43,8 +43,10 @@ const Arrivals = () => {
       className="relative mx-auto h-screen w-screen max-w-7xl pt-8"
       ref={section}
     >
-      <div className="relative grid grid-cols-3">
-        <p className="text-shadow font-kaushan text-8xl">New Arrivals</p>
+      <div className="relative grid md:grid-cols-3">
+        <p className="text-shadow font-kaushan text-4xl md:text-8xl">
+          New Arrivals
+        </p>
         <div className="h-[90vh] overflow-hidden rounded-lg border-4 border-black p-4">
           <div ref={container}>
             {images.map((imgSrc) => (
@@ -52,9 +54,8 @@ const Arrivals = () => {
                 src={imgSrc}
                 alt="scrollTrigger images"
                 key={imgSrc}
-                width="400px"
                 height={"600px"}
-                className="object-cover py-6"
+                className="w-full object-cover py-6"
                 initial={{ filter: "grayscale(100%)" }}
                 whileInView={{
                   filter: "grayscale(0%)",
@@ -64,7 +65,7 @@ const Arrivals = () => {
             ))}
           </div>
         </div>
-        <div className="ml-auto max-w-xs self-center text-xl">
+        <div className="ml-auto hidden max-w-xs self-center text-xl md:block">
           <p>
             There is new collection available for cool clothes in all sizes.
             This collection is a great way to find a new look for you. It offers

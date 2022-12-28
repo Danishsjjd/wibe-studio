@@ -42,10 +42,10 @@ const Collections = () => {
     <section className="min-h-[100vh] bg-white" ref={section}>
       <div className="flex">
         <div className="relative grid min-h-[100vh] w-1/3 place-items-center bg-body p-6 text-text">
-          <h2 className="text-shadow absolute top-4 font-kaushan text-8xl">
+          <h2 className="text-shadow absolute top-4 font-kaushan text-4xl md:text-8xl">
             New Collections
           </h2>
-          <p className="mt-16 text-xl">
+          <p className="mt-16 text-xs md:text-xl">
             The brand new collection is currently being developed in USA. We
             create our products using best quality material, including the use
             of some of the pure fabrics to make our products. All products are
