@@ -1,13 +1,13 @@
-import { motion, useMotionValue } from "framer-motion";
-import { useState } from "react";
+import { motion, useMotionValue } from "framer-motion"
+import { useState } from "react"
 
 const Navbar = () => {
-  const [isActive, setIsActive] = useState(false);
-  const y = useMotionValue(0);
+  const [isActive, setIsActive] = useState(false)
+  const y = useMotionValue(0)
   const liClass =
-    "hover:scale-125 py-8 text-lg font-medium transition grid place-items-center";
+    "hover:scale-125 py-8 text-lg font-medium transition grid place-items-center"
 
-  const navigateTo = (section: string) => {};
+  const navigateTo = (section: string) => {}
   return (
     <motion.div
       className={`absolute top-0 z-50 w-screen transition-transform ${
@@ -24,7 +24,7 @@ const Navbar = () => {
         dragElastic={0.099}
         onDragEnd={() => {
           if (y.get() > 8) {
-            setIsActive(true);
+            setIsActive(true)
           }
         }}
         style={{ y }}
@@ -43,26 +43,21 @@ const Navbar = () => {
             </button>
           </motion.li>
           <li className={liClass}>
-            <button onClick={() => navigateTo("Home")}>Home</button>
+            <a href="#Home">Home</a>
           </li>
           <li className={liClass}>
-            <button onClick={() => navigateTo("About")}>About</button>
+            <a href="#About">About</a>
           </li>
           <li className={liClass}>
-            <button onClick={() => navigateTo("Shope")}>Shope</button>
+            <a href="#Shope">Shope</a>
           </li>
           <li className={liClass}>
-            <button onClick={() => navigateTo("hero")}>Home</button>
-          </li>
-          <li className={liClass}>
-            <button onClick={() => navigateTo("NewArrival")}>
-              New Arrival
-            </button>
+            <a href="#Arrival">New Arrival</a>
           </li>
         </ul>
       </motion.div>
     </motion.div>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

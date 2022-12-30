@@ -1,25 +1,25 @@
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { motion } from "framer-motion";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react"
+import { gsap } from "gsap"
+import { motion } from "framer-motion"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 
-import img1 from "../assets/Images/1.webp";
-import img2 from "../assets/Images/2.webp";
-import img3 from "../assets/Images/3.webp";
-import img4 from "../assets/Images/4.webp";
-import img5 from "../assets/Images/5.webp";
-import img6 from "../assets/Images/6.webp";
-import img7 from "../assets/Images/7.webp";
-import img8 from "../assets/Images/8.webp";
-import img9 from "../assets/Images/9.webp";
+import img1 from "../assets/Images/1.webp"
+import img2 from "../assets/Images/2.webp"
+import img3 from "../assets/Images/3.webp"
+import img4 from "../assets/Images/4.webp"
+import img5 from "../assets/Images/5.webp"
+import img6 from "../assets/Images/6.webp"
+import img7 from "../assets/Images/7.webp"
+import img8 from "../assets/Images/8.webp"
+import img9 from "../assets/Images/9.webp"
 
-const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
+const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9]
 
 const Arrivals = () => {
-  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger)
 
-  const container = useRef<HTMLDivElement | null>(null);
-  const section = useRef<HTMLDivElement | null>(null);
+  const container = useRef<HTMLDivElement | null>(null)
+  const section = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
     const tween = gsap.to(container.current, {
@@ -31,17 +31,18 @@ const Arrivals = () => {
         pin: section.current,
         scrub: 1,
       },
-    });
+    })
 
     return () => {
-      tween.revert();
-    };
-  }, []);
+      tween.revert()
+    }
+  }, [])
 
   return (
     <section
       className="relative mx-auto h-screen w-screen max-w-7xl pt-8"
       ref={section}
+      id="Arrival"
     >
       <div className="relative grid md:grid-cols-3">
         <p className="text-shadow font-kaushan text-4xl md:text-8xl">
@@ -82,7 +83,7 @@ const Arrivals = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Arrivals;
+export default Arrivals

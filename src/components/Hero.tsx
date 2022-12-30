@@ -1,7 +1,7 @@
-import { motion, Variants } from "framer-motion";
+import { motion, Variants } from "framer-motion"
 
-import heroVideo from "../assets/Walking Girl.mp4";
-import Logo from "./Logo";
+import heroVideo from "../assets/Walking Girl.mp4"
+import Logo from "./Logo"
 
 const container = {
   hidden: {
@@ -15,7 +15,7 @@ const container = {
       staggerChildren: 0.3,
     },
   },
-};
+}
 const item = {
   hidden: {
     opacity: 0,
@@ -23,7 +23,7 @@ const item = {
   show: {
     opacity: 1,
   },
-};
+}
 
 const Hero = () => {
   return (
@@ -31,7 +31,7 @@ const Hero = () => {
       <div className="absolute inset-0 -z-10 bg-body/40" />
       <video
         src={heroVideo}
-        // autoPlay
+        autoPlay
         loop
         controls={false}
         className="absolute inset-0 -z-20 h-screen w-full object-cover"
@@ -45,7 +45,7 @@ const Hero = () => {
           initial={"hidden"}
           animate="show"
         >
-          <div className="text-shadow flex font-kaushan [&>*]:text-[10rem]">
+          <div className="text-shadow flex px-3 font-kaushan [&>*]:text-8xl md:[&>*]:text-[10rem]">
             <motion.h2 variants={item}>W</motion.h2>
             <motion.h2 variants={item}>i</motion.h2>
             <motion.h2 variants={item}>b</motion.h2>
@@ -55,7 +55,7 @@ const Hero = () => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

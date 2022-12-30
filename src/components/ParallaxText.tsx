@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef } from "react"
 import {
   motion,
   useScroll,
@@ -7,49 +7,49 @@ import {
   useMotionValue,
   useVelocity,
   useAnimationFrame,
-} from "framer-motion";
-import { wrap } from "@motionone/utils";
+} from "framer-motion"
+import { wrap } from "@motionone/utils"
 
 interface ParallaxProps {
-  children: string;
-  baseVelocity: number;
+  children: string
+  baseVelocity: number
 }
 
 export default function ParallaxText({
   children,
   baseVelocity = 100,
 }: ParallaxProps) {
-  const baseX = useMotionValue(0);
-  const { scrollY } = useScroll();
-  const scrollVelocity = useVelocity(scrollY);
+  const baseX = useMotionValue(0)
+  const { scrollY } = useScroll()
+  const scrollVelocity = useVelocity(scrollY)
   const smoothVelocity = useSpring(scrollVelocity, {
     damping: 50,
     stiffness: 400,
-  });
+  })
   const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
     clamp: false,
-  });
-  const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
+  })
+  const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`)
 
-  const directionFactor = useRef<number>(1);
+  const directionFactor = useRef<number>(1)
   useAnimationFrame((t, delta) => {
-    let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
+    let moveBy = directionFactor.current * baseVelocity * (delta / 1000)
 
     if (velocityFactor.get() < 0) {
-      directionFactor.current = -1;
+      directionFactor.current = -1
     } else if (velocityFactor.get() > 0) {
-      directionFactor.current = 1;
+      directionFactor.current = 1
     }
 
-    moveBy += directionFactor.current * moveBy * velocityFactor.get();
+    moveBy += directionFactor.current * moveBy * velocityFactor.get()
 
-    baseX.set(baseX.get() + moveBy);
-  });
+    baseX.set(baseX.get() + moveBy)
+  })
 
   return (
     <div className="m-0 flex flex-nowrap overflow-hidden whitespace-nowrap">
       <motion.div
-        className="m-0 flex flex-nowrap whitespace-nowrap text-6xl font-bold uppercase [&>span]:mr-8 [&>span]:block"
+        className="m-0 flex flex-nowrap whitespace-nowrap text-2xl font-bold uppercase sm:text-4xl md:text-6xl [&>span]:mr-8 [&>span]:block"
         style={{ x }}
       >
         <span>{children} </span>
@@ -62,5 +62,5 @@ export default function ParallaxText({
         <span>{children} </span>
       </motion.div>
     </div>
-  );
+  )
 }

@@ -14,6 +14,7 @@
     font-family: "Sirin Stencil";
     overflow-x: hidden;
     background-color: white;
+    scroll-behavior: smooth;
 
     --body-text: hsl(0 0% 13%);
     --text-text: hsl(0 0% 100%);
