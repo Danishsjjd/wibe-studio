@@ -1,14 +1,23 @@
-import About from "./components/About";
-import Arrivals from "./components/Arrivals";
-import Collections from "./components/Collections";
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import ParallaxText from "./components/ParallaxText";
+import { useState } from "react"
+import About from "./components/About"
+import Arrivals from "./components/Arrivals"
+import Collections from "./components/Collections"
+import Footer from "./components/Footer"
+import Hero from "./components/Hero"
+import Loader from "./components/Loader"
+import Navbar from "./components/Navbar"
+import ParallaxText from "./components/ParallaxText"
 
 function App() {
+  const [isScrollbarVisible, setIsScrollbarVisible] = useState(false)
   return (
     <main>
+      {!isScrollbarVisible && (
+        <Loader
+          isScrollbarVisible={isScrollbarVisible}
+          setIsScrollbarVisible={setIsScrollbarVisible}
+        />
+      )}
       <Navbar />
       <Hero />
       <About />
@@ -24,7 +33,7 @@ function App() {
       <Arrivals />
       <Footer />
     </main>
-  );
+  )
 }
 
-export default App;
+export default App
