@@ -1,19 +1,19 @@
-import img1 from "../assets/Images/1.webp";
-import img2 from "../assets/Images/2.webp";
-import img3 from "../assets/Images/3.webp";
+import img1 from "../assets/Images/1.webp"
+import img2 from "../assets/Images/2.webp"
+import img3 from "../assets/Images/3.webp"
 const About = () => {
   return (
     <section id="About" className="overflow-hidden bg-white">
-      <div className="relative mx-auto min-h-[100vh] max-w-7xl gap-3 py-3 px-6 md:flex md:px-0">
+      <div className="relative mx-auto max-w-7xl gap-3 py-3 px-6 md:flex md:min-h-[100vh] md:px-0">
         <div className="relative z-10 flex-1">
           <h2 className="text-shadow  font-kaushan text-4xl md:text-9xl">
             About Us
           </h2>
           <div
-            className="relative z-10 mx-auto mt-3 max-w-xl rounded-md bg-white/40 p-4 pr-7 text-base backdrop-blur-sm md:h-[80vh] md:max-w-none md:bg-transparent md:p-0 md:text-xl md:backdrop-blur-0"
+            className="relative z-10 mx-auto mt-3 max-w-xl rounded-md bg-white/40 p-4 pr-7 text-base backdrop-blur-sm md:h-[80vh] md:max-w-none md:p-0 md:text-xl md:backdrop-blur-0"
             id="about-fixed-target"
           >
-            <p>
+            <p className="md:pl-3">
               We're fashion studio based in california. We create unique designs
               that will blow your mind. We also design unique jewellary pieces.
               Fashion is an ART that can not be grasped by everyone.
@@ -50,7 +50,7 @@ const About = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default About;
+export default About

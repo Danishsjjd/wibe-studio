@@ -31,7 +31,7 @@ const Hero = () => {
       <div className="absolute inset-0 -z-10 bg-body/40" />
       <video
         src={heroVideo}
-        // autoPlay
+        autoPlay
         loop
         controls={false}
         className="absolute inset-0 -z-20 h-screen w-full object-cover"

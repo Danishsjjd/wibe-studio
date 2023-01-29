@@ -38,9 +38,11 @@ const textVariants: Variants = {
 const loaderVariants: Variants = {
   hidden: {
     y: 0,
+    opacity: 1,
   },
   visible: {
     y: "100%",
+    opacity: 0,
     transition: {
       ease: "easeInOut",
       delay: 2.5,

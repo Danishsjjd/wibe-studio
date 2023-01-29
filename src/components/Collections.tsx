@@ -39,7 +39,11 @@ const Collections = () => {
   }, [])
 
   return (
-    <section className="min-h-[100vh] bg-white" ref={section} id="Shope">
+    <section
+      className="hidden min-h-[100vh] bg-white md:block"
+      ref={section}
+      id="Shope"
+    >
       <div className="flex">
         <div className="relative grid min-h-[100vh] w-1/3 min-w-[200px] place-items-center bg-body p-2 text-text md:p-6">
           <h2 className="text-shadow absolute top-4 font-kaushan text-4xl md:text-6xl">

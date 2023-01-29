@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <section className="min-w-screen min-h-screen bg-body text-white">
       <div className="mx-auto  flex min-h-screen max-w-5xl flex-col items-center justify-center space-y-12">
-        <img src={logo} alt="logo" className="h-auto w-[10vw]" />
+        <img src={logo} alt="logo" className="h-auto w-[10vw] min-w-[80px]" />
         <p className="text-6xl">Wibe Studio</p>
         <ul className="mx-4 flex w-full flex-wrap items-center justify-between border-t-2 border-b-2 border-t-white border-b-white p-4 font-sirin">
           <li className={liClass}>

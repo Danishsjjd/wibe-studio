@@ -45,10 +45,10 @@ const Arrivals = () => {
       id="Arrival"
     >
       <div className="relative grid md:grid-cols-3">
-        <p className="text-shadow font-kaushan text-4xl md:text-8xl">
+        <p className="text-shadow font-kaushan text-4xl md:text-7xl lg:text-8xl">
           New Arrivals
         </p>
-        <div className="h-[90vh] overflow-hidden rounded-lg border-4 border-black p-4">
+        <div className="mx-auto h-[90vh] w-10/12 overflow-hidden rounded-lg border-4 border-black p-4 md:w-auto">
           <div ref={container}>
             {images.map((imgSrc) => (
               <motion.img
@@ -66,7 +66,7 @@ const Arrivals = () => {
             ))}
           </div>
         </div>
-        <div className="ml-auto hidden max-w-xs self-center text-xl md:block">
+        <div className="ml-auto hidden max-w-xs self-center pl-4 pr-8 text-xl md:block">
           <p>
             There is new collection available for cool clothes in all sizes.
             This collection is a great way to find a new look for you. It offers
